@@ -4,6 +4,10 @@ namespace MethodExercise
 {
     class Program
     {
+        public static double AreaOfCircle(int radius)
+        {
+            return Math.PI * Math.Pow(radius, 2);
+        }
         static void Main(string[] args)
         {
             int a = 17;
@@ -17,6 +21,10 @@ namespace MethodExercise
                 Console.WriteLine($"{a}/{b} is {quotient} remainder {remainder}");
 
             }
+
+            Console.WriteLine("Type the radius of the circle.");
+            int radius = int.Parse(Console.ReadLine());
+            Console.WriteLine($"The area is {AreaOfCircle(radius)}");
         }
     }
 }
